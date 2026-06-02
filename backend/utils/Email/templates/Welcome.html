@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Pratishtha 2026</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 0;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #8b5cf6, #ec4899);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+            font-size: 16px;
+        }
+        .content {
+            padding: 30px;
+        }
+        .greeting {
+            font-size: 20px;
+            color: #374151;
+            margin-bottom: 20px;
+        }
+        .message {
+            color: #4b5563;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        .highlight-box {
+            background: #f8fafc;
+            border-left: 4px solid #8b5cf6;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .highlight-box h3 {
+            margin: 0 0 15px 0;
+            color: #8b5cf6;
+            font-size: 18px;
+        }
+        .feature-list {
+            color: #4b5563;
+            padding-left: 20px;
+            margin: 0;
+        }
+        .feature-list li {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #8b5cf6, #ec4899);
+            color: white;
+            padding: 14px 35px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 25px 0;
+            text-align: center;
+        }
+        .cta-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .footer {
+            background: #f9fafb;
+            padding: 20px 30px;
+            text-align: center;
+            border-top: 1px solid #e5e7eb;
+        }
+        .footer p {
+            margin: 5px 0;
+            color: #6b7280;
+            font-size: 14px;
+        }
+        .event-info {
+            color: #8b5cf6;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .social-links {
+            margin: 15px 0;
+        }
+        .social-links a {
+            color: #8b5cf6;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                margin: 0;
+                border-radius: 0;
+            }
+            .content {
+                padding: 20px;
+            }
+            .header {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎉 Welcome to Pratishtha 2026!</h1>
+            <p>SAKEC's Annual Technical & Cultural Festival</p>
+        </div>
+        
+        <div class="content">
+            <div class="greeting">Hello {{USER_NAME}},</div>
+            
+            <div class="message">
+                Congratulations! Your account has been successfully verified and you're now part of the Pratishtha 2026 community. 
+                Get ready for an incredible journey filled with exciting events, competitions, and unforgettable experiences!
+            </div>
+            
+            <div class="highlight-box">
+                <h3>🚀 What's waiting for you:</h3>
+                <ul class="feature-list">
+                    <li><strong>Technical Events:</strong> Showcase your skills in coding, robotics, and more</li>
+                    <li><strong>Cultural Events:</strong> Express yourself through music, dance, and art</li>
+                    <li><strong>Workshops:</strong> Learn from industry experts and enhance your knowledge</li>
+                    <li><strong>Networking:</strong> Connect with like-minded individuals from various colleges</li>
+                </ul>
+            </div>
+            
+            <div class="message">
+                Browse through our exciting lineup of events and register for the ones that interest you. 
+                Don't miss out on the chance to win amazing prizes and create lasting memories!
+            </div>
+            
+            <div class="cta-section">
+                <a href="{{FRONTEND_URL}}/events" class="cta-button">Explore Events</a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p class="event-info">Pratishtha 2026 - Where AI Meets Creativity</p>
+            <p>Shah & Anchor Kutchhi Engineering College (SAKEC)</p>
+            <div class="social-links">
+                Follow us for updates!
+            </div>
+            <p>This is an automated email. Please do not reply.</p>
+        </div>
+    </div>
+</body>
+</html>

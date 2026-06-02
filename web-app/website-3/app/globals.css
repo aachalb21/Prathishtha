@@ -1,0 +1,394 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+}
+
+body {
+  background: url('/Assets/Background/Main-bg.png') no-repeat center top fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 640px) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Gallery Layout - Override body background */
+#__next > div[style*="backgroundImage"] {
+  background-attachment: fixed !important;
+}
+
+body:has(#__next > div[style*="backgroundImage"]) {
+  background: transparent !important;
+}
+
+/* =======================================
+   COMIC GRAFFITI STYLE LOGIN PAGE
+   ======================================= */
+
+/* Comic Graffiti Background */
+.comic-graffiti-bg {
+  position: relative;
+  background: linear-gradient(135deg, #FFE75C 0%, #FF6B6B 25%, #4ECDC4 50%, #FF6B9D 75%, #C7CEEA 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Comic Style Text - Bold & Impactful */
+.comic-style-text {
+  font-family: 'Comic Sans MS', 'Impact', sans-serif;
+  letter-spacing: 2px;
+  font-style: italic;
+  text-shadow: 
+    -2px -2px 0 #FFE75C,
+    2px -2px 0 #FFE75C,
+    -2px 2px 0 #FFE75C,
+    2px 2px 0 #FFE75C,
+    -2px 0 0 #FFE75C,
+    2px 0 0 #FFE75C,
+    0 -2px 0 #FFE75C,
+    0 2px 0 #FFE75C,
+    3px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Comic Border - Thick black wavy style */
+.comic-border {
+  position: relative;
+  box-shadow: 
+    0 0 0 8px #000,
+    0 8px 16px rgba(0, 0, 0, 0.3),
+    inset 0 0 0 2px #FFE75C;
+}
+
+/* Comic Input Styling */
+.comic-input {
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.1),
+    0 0 0 2px #FFF;
+  font-family: 'Impact', sans-serif;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.comic-input:hover {
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.1),
+    0 0 0 3px #FFE75C;
+  transform: translateY(-2px);
+}
+
+.comic-input:focus {
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.1),
+    0 0 0 4px #FFE75C,
+    0 0 20px rgba(255, 215, 0, 0.5);
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Comic Button */
+.comic-button {
+  font-family: 'Impact', sans-serif;
+  letter-spacing: 2px;
+  box-shadow: 
+    0 6px 0 #333,
+    0 8px 16px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transform: translateY(0);
+  transition: all 0.1s ease;
+}
+
+.comic-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 0 #333,
+    0 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+.comic-button:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 
+    0 2px 0 #333,
+    0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Comic Callout Box */
+.comic-callout {
+  position: relative;
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E72 100%);
+  box-shadow: 
+    0 0 0 4px #000,
+    0 8px 0 -2px #000,
+    inset 0 0 0 2px #FFE75C;
+  animation: wobble 0.5s ease;
+}
+.comic-font {
+  font-family: 'Happy School', sans-serif;
+}
+.shadow-comic {
+  box-shadow: 4px 4px 0 0 #000, 8px 8px 0 0 #ffd600;
+  
+}
+.comic-panel {
+  border-radius: 1.5rem;
+  border: 4px solid #000;
+  box-shadow: 4px 4px 0 0 #000, 8px 8px 0 0 #ffd600;
+  background: #fffbe7;
+}
+
+@keyframes wobble {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+}
+
+/* Comic Speech Bubble */
+.comic-speech-bubble {
+  position: relative;
+  background: #FFE75C;
+  box-shadow: 
+    0 0 0 4px #000,
+    0 8px 0 -2px #000,
+    inset 0 0 0 2px #FFF;
+  font-family: 'Impact', sans-serif;
+  letter-spacing: 1px;
+}
+
+.comic-speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 24px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 0 solid transparent;
+  border-top: 12px solid #FFE75C;
+  filter: drop-shadow(0 2px 0 #000);
+}
+
+/* Comic Link */
+.comic-link {
+  position: relative;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.comic-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+
+.comic-link:hover::after {
+  width: 100%;
+}
+
+/* Comic Halftone Background Pattern */
+@media (min-width: 768px) {
+  .comic-graffiti-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle, rgba(0,0,0,0.15) 30%, transparent 30%);
+    background-size: 8px 8px;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+/* Decorative Comic Elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+/* Responsive adjustments */
+/* =======================================
+   GALLERY PAGE ANIMATIONS
+   ======================================= */
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) rotate(-2deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+  }
+}
+
+/* Comic Gallery Card */
+.comic-gallery-card {
+  position: relative;
+  border: 4px solid #000;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.comic-gallery-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Comic Label Badge */
+.comic-label-badge {
+  position: absolute;
+  padding: 8px 16px;
+  background: #FFE75C;
+  border: 2px solid #000;
+  border-radius: 8px;
+  font-weight: 900;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  transform: rotate(-5deg);
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 640px) {
+  .comic-style-text {
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+  }
+
+  .comic-button {
+    font-size: 0.875rem;
+  }
+
+  .comic-border {
+    box-shadow: 
+      0 0 0 6px #000,
+      0 6px 12px rgba(0, 0, 0, 0.3),
+      inset 0 0 0 2px #FFE75C;
+  }
+}
+/* Custom Font - Happy School */
+@font-face {
+  font-family: 'Happy School';
+  src: url('/Fonts/Happy School.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Apply Happy School font globally */
+body {
+  font-family: 'Happy School', sans-serif;
+}
+
+/* Utility class for the font */
+.font-happy-school {
+  font-family: 'Happy School', sans-serif;
+}
+
+/* Shake animation for payment failed */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.animate-shake {
+  animation: shake 0.6s ease-in-out;
+}
+
+/* Comic style utility classes */
+
+

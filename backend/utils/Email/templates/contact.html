@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Contact Message - Pratishtha 2026</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 0;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #8b5cf6, #ec4899);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+            font-size: 16px;
+        }
+        .content {
+            padding: 30px;
+        }
+        .message-info {
+            background: #f8fafc;
+            border-left: 4px solid #8b5cf6;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .info-row {
+            display: flex;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        .info-label {
+            font-weight: bold;
+            color: #374151;
+            min-width: 100px;
+            margin-right: 15px;
+        }
+        .info-value {
+            color: #6b7280;
+            flex: 1;
+        }
+        .message-content {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .message-content h3 {
+            margin: 0 0 15px 0;
+            color: #374151;
+            font-size: 18px;
+        }
+        .message-text {
+            color: #4b5563;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+        .footer {
+            background: #f9fafb;
+            padding: 20px 30px;
+            text-align: center;
+            border-top: 1px solid #e5e7eb;
+        }
+        .footer p {
+            margin: 0;
+            color: #6b7280;
+            font-size: 14px;
+        }
+        .timestamp {
+            background: #eef2ff;
+            color: #4338ca;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        @media (max-width: 600px) {
+            .container {
+                margin: 0;
+                border-radius: 0;
+            }
+            .content {
+                padding: 20px;
+            }
+            .header {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📧 New Contact Message</h1>
+            <p>Pratishtha 2026 - SAKEC Festival</p>
+        </div>
+        
+        <div class="content">
+            <div class="timestamp">
+                Received: {{TIMESTAMP}}
+            </div>
+            
+            <div class="message-info">
+                <div class="info-row">
+                    <span class="info-label">👤 Name:</span>
+                    <span class="info-value">{{SENDER_NAME}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">📧 Email:</span>
+                    <span class="info-value">{{SENDER_EMAIL}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">📱 Phone:</span>
+                    <span class="info-value">{{SENDER_PHONE}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">📋 Subject:</span>
+                    <span class="info-value">{{MESSAGE_SUBJECT}}</span>
+                </div>
+            </div>
+            
+            <div class="message-content">
+                <h3>💬 Message:</h3>
+                <div class="message-text">{{MESSAGE_CONTENT}}</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>This message was sent through the Pratishtha 2026 contact form</p>
+            <p>Please respond to the sender at: <strong>{{SENDER_EMAIL}}</strong></p>
+        </div>
+    </div>
+</body>
+</html>

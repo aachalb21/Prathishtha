@@ -1,0 +1,35 @@
+# Robots.txt for Pratishtha 2026
+# Allow search engines to crawl public pages
+
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /admin
+Disallow: /*.json$
+Disallow: /*?*sort=
+Disallow: /verify
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Disallow: /dashboard
+Disallow: /admin
+Disallow: /verify
+Crawl-delay: 1
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Disallow: /dashboard
+Disallow: /admin
+Disallow: /verify
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: MJ12bot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://pratishtha.sakec.ac.in/sitemap.xml

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Created - Pratishtha 2026</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #8b5cf6, #ec4899);
+            color: #ffffff;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .header p {
+            margin: 10px 0 0;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 30px 20px;
+            color: #333333;
+        }
+        .greeting {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #374151;
+        }
+        .success-badge {
+            background: linear-gradient(135deg, #8b5cf6, #ec4899);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .team-info {
+            background: #f8fafc;
+            border-left: 4px solid #8b5cf6;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .team-info h3 {
+            margin: 0 0 15px 0;
+            color: #8b5cf6;
+            font-size: 18px;
+        }
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .info-row:last-child {
+            border-bottom: none;
+        }
+        .info-label {
+            font-weight: 600;
+            color: #6b7280;
+        }
+        .info-value {
+            color: #111827;
+            font-weight: 500;
+        }
+        .join-token-box {
+            background: linear-gradient(135deg, #8b5cf6, #ec4899);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .join-token-box h3 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        .token-code {
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px 25px;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+        }
+        .qr-code-section {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 10px;
+        }
+        .qr-code-section h3 {
+            margin: 0 0 15px 0;
+            color: #8b5cf6;
+        }
+        .qr-code-section img {
+            max-width: 250px;
+            height: auto;
+            border: 3px solid #8b5cf6;
+            border-radius: 10px;
+            padding: 10px;
+            background: white;
+        }
+        .instructions {
+            background: #f8fafc;
+            border-left: 4px solid #ec4899;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .instructions h4 {
+            margin: 0 0 10px 0;
+            color: #ec4899;
+        }
+        .instructions ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .instructions li {
+            margin: 8px 0;
+            color: #4b5563;
+        }
+        .footer {
+            background: #f9fafb;
+            padding: 20px;
+            text-align: center;
+            color: #6b7280;
+            font-size: 12px;
+            border-top: 1px solid #e5e7eb;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        .button {
+            display: inline-block;
+            background: linear-gradient(135deg, #8b5cf6, #ec4899);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .emoji {
+            font-size: 24px;
+        }
+        @media (max-width: 600px) {
+            .email-container {
+                margin: 0;
+                border-radius: 0;
+            }
+            .content {
+                padding: 20px;
+            }
+            .header {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🎯 Team Created Successfully!</h1>
+            <p>Pratishtha 2026 - SAKECFEST</p>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <p class="greeting">Hello <strong>{{LEADER_NAME}}</strong>,</p>
+            
+            <div class="success-badge">
+                ✓ Team Registration Complete
+            </div>
+
+            <p>Congratulations! Your team has been successfully created for the event.</p>
+
+            <!-- Team Information -->
+            <div class="team-info">
+                <h3>📋 Team Details</h3>
+                <div class="info-row">
+                    <span class="info-label">Team Name:</span>
+                    <span class="info-value">{{TEAM_NAME}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Event:</span>
+                    <span class="info-value">{{EVENT_NAME}}</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Team Size:</span>
+                    <span class="info-value">{{TEAM_SIZE}} members</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Your Role:</span>
+                    <span class="info-value">Team Leader</span>
+                </div>
+            </div>
+
+            <!-- Join Token -->
+            <div class="join-token-box">
+                <h3>🔑 Team Join Token</h3>
+                <div class="token-code">{{JOIN_TOKEN}}</div>
+                <p style="margin: 10px 0 0; font-size: 14px; opacity: 0.9;">
+                    Share this code with your team members
+                </p>
+            </div>
+
+            <!-- QR Code -->
+            <div class="qr-code-section">
+                <h3>📱 Team Registration QR Code</h3>
+                <p style="color: #6b7280; margin-bottom: 15px;">
+                    Present this QR code at the event for attendance verification. <strong>Keep this QR code safe - it can only be scanned once!</strong>
+                </p>
+                <img src="{{QR_CODE_URL}}" alt="Team Registration QR Code">
+            </div>
+
+            <!-- Instructions -->
+            <div class="instructions">
+                <h4>📝 Important Information:</h4>
+                <ol>
+                    <li><strong>Share Join Token:</strong> Team members can join using token: <strong>{{JOIN_TOKEN}}</strong></li>
+                    <li><strong>QR Code Usage:</strong> This QR code is for event check-in/registration verification</li>
+                    <li><strong>At the Event:</strong> Show this QR code to event organizers for attendance</li>
+                    <li><strong>One-Time Scan:</strong> QR code can only be scanned once - don't share it publicly</li>
+                    <li><strong>Keep Safe:</strong> Save this email for the event day</li>
+                </ol>
+            </div>
+
+            <p style="margin-top: 30px; color: #6b7280;">
+                <strong>Important:</strong> Make sure your team has exactly {{TEAM_SIZE}} members before the event starts. 
+                You can check your team status anytime from your dashboard.
+            </p>
+
+            <div style="text-align: center;">
+                <a href="{{FRONTEND_URL}}/events" class="button">View Event Details</a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p><strong>Pratishtha 2026 - SAKECFEST</strong></p>
+            <p>Shah and Anchor Kutchhi Engineering College</p>
+            <p>For support, contact us at {{EMAIL_ADDRESS}}</p>
+            <p style="margin-top: 15px; font-size: 11px; color: #9ca3af;">
+                This is an automated email. Please do not reply to this message.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
